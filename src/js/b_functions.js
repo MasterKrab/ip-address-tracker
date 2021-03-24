@@ -28,7 +28,6 @@ const getLocationData = (ip) =>{
       })
       .catch((error) =>{
          console.error(error);
-         form.ip.setCustomValidity("Invalid IP adress");
       });
 }
 
