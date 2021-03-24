@@ -29,16 +29,13 @@ const getLocationData = (ip) =>{
       .catch(form.ip.setCustomValidity("Invalid IP adress"));
 }
 
-const getCurrentLocationData = () =>{
+const getCurrentLocationData = async () =>{
    const url = `https://geo.ipify.org/api/v1?apiKey=${apiKey}`;
-   
-   fetch(url)
-      .then(response => response.json())
-      .then(data => {
+   const request = await fetch(url);
+   const data = await request.json();
          showMap(data.location.lat, data.location.lng);
          ipElement.textContent = data.ip;
          locationElement.textContent = `${data.location.city}, ${data.location.region} ${data.location.postalCode}`;
          timezoneElement.textContent = `UTC ${data.location.timezone}`;
          providerElement.textContent = data.isp;
-      })
 }
