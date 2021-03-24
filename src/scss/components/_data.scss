@@ -42,16 +42,12 @@
       }
    }
 
-   &__term,
-   &__value{
-      font-weight: 700;
-   }
-
    &__term{
       color: c.$dark-gray;
       font-size: 0.65rem;
       text-transform: uppercase;
       letter-spacing: 2px;
+      font-weight: 700;
 
       @media screen and (min-width: 768px){
          font-size: 0.7rem;
@@ -63,6 +59,7 @@
       margin-top: 0.5rem;
       margin-left: 0;
       font-size: 1.2rem;
+      font-weight: 500;
 
       @media screen and (min-width: 1200px){
          font-size: 1.5rem;

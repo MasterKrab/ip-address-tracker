@@ -23,7 +23,7 @@ const getLocationData = (ip) =>{
 
          ipElement.textContent = data.ip;
          locationElement.textContent = `${data.location.city}, ${data.location.region} ${data.location.postalCode}`;
-         timezoneElement.textContent = `UTC -${data.location.timezone}`;
+         timezoneElement.textContent = `UTC ${data.location.timezone}`;
          providerElement.textContent = data.isp;
       })
       .catch(form.ip.setCustomValidity("Invalid IP adress"));
