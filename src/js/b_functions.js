@@ -26,7 +26,10 @@ const getLocationData = (ip) =>{
          timezoneElement.textContent = `UTC ${data.location.timezone}`;
          providerElement.textContent = data.isp;
       })
-      .catch(form.ip.setCustomValidity("Invalid IP adress"));
+      .catch((error) =>{
+         console.error(error);
+         form.ip.setCustomValidity("Invalid IP adress");
+      });
 }
 
 const getCurrentLocationData = () =>{
